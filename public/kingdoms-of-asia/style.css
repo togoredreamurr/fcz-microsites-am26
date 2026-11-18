@@ -6,3 +6,48 @@ nav a {
 .nav-button {
     max-width: 100%;
 }
+
+.animal-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 16px;
+    border: 0;
+    font-family: "Inter", sans-serif;
+}
+
+.animal-tabs__input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+}
+
+.animal-tabs__tab {
+    padding: 8px 16px;
+    border: 2px solid #F68B1F;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #21080B;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+.animal-tabs__input:checked + .animal-tabs__tab {
+    color: #000000;
+    background: #F68B1F;
+}
+
+.animal-tabs__input:focus-visible + .animal-tabs__tab {
+    outline: 3px solid #21080B;
+    outline-offset: 2px;
+}
+
+.animals:has(#tab-mammal:checked) .animal-list > li:not([data-type="mammal"]),
+.animals:has(#tab-reptile:checked) .animal-list > li:not([data-type="reptile"]),
+.animals:has(#tab-bird:checked) .animal-list > li:not([data-type="bird"]),
+.animals:has(#tab-fish:checked) .animal-list > li:not([data-type="fish"]) {
+    display: none;
+}

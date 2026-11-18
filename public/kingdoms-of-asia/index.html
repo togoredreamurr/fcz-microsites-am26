@@ -2,24 +2,230 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=, initial-scale=1.0">
-        <title>Kingdoms of Asia</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kingdoms of Asia | Fresno Chaffee Zoo</title>
+        <meta name="description" content="Immersive species dossiers from the heart of Kingdoms of Asia at the Fresno Chaffee Zoo.">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Imprima&family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
         <link rel="stylesheet" href="style.css">
     </head>
 
-    <body>
-        <header>
-            <nav id="main-nav" role="main-nav">
-                <a href="index.html" class="nav-button"> <img src="images.png" alt="logo for the fresno chaffee zoo"></a>
-                <a href="#" class="nav-bar">VISIT</a>
-                <a href="#" class="nav-bar">ANIMALS</a>
-                <a href="#" class="nav-bar">EVENTS</a>
-                <a href="#" class="nav-bar">CONSERVATION</a>
-                <a href="#" class="nav-bar">LEARNING</a>
-                <a href="#" class="nav-bar">LEARNING</a>
-                <a href="#" class="nav-bar">SUPPORT</a>
-                
+    <body class="page-home">
+        <a class="skip-link" href="#main">Skip to main content</a>
+
+        <header class="site-header">
+            <a href="index.html" class="site-logo">
+                <img src="images.png" alt="Fresno Chaffee Zoo home">
+            </a>
+
+            <nav class="main-nav" aria-label="Main">
+                <ul class="main-nav__list">
+                    <li><a href="#" class="main-nav__link">Visit <span class="chevron" aria-hidden="true"></span></a></li>
+                    <li><a href="#" class="main-nav__link">Animals <span class="chevron" aria-hidden="true"></span></a></li>
+                    <li><a href="#" class="main-nav__link">Events <span class="chevron" aria-hidden="true"></span></a></li>
+                    <li><a href="#" class="main-nav__link">Conservation <span class="chevron" aria-hidden="true"></span></a></li>
+                    <li><a href="#" class="main-nav__link">Learning <span class="chevron" aria-hidden="true"></span></a></li>
+                    <li><a href="#" class="main-nav__link">Support <span class="chevron" aria-hidden="true"></span></a></li>
+                    <li><a href="#" class="main-nav__link">Blog <span class="chevron" aria-hidden="true"></span></a></li>
+                </ul>
             </nav>
+
+            <div class="header-actions">
+                <a href="#" class="accessibility-link">
+                    <img src="images/icon-accessibility.svg" alt="" width="32" height="32">
+                    <span class="visually-hidden">Accessibility</span>
+                </a>
+                <select class="language-select language-select--header" aria-label="Language">
+                    <option value="en" selected>English</option>
+                    <option value="es">Español</option>
+                </select>
+
+                <a href="#" class="btn btn--tickets">Tickets</a>
+                <a href="#" class="btn btn--membership">Membership</a>
+
+                <button type="button" class="menu-toggle" popovertarget="site-menu" aria-label="Open menu">
+                    <span class="menu-toggle__bar" aria-hidden="true"></span>
+                    <span class="menu-toggle__bar" aria-hidden="true"></span>
+                    <span class="menu-toggle__bar" aria-hidden="true"></span>
+                </button>
+            </div>
         </header>
+
+        <div id="site-menu" class="site-menu" popover>
+            <div class="site-menu__top">
+                <a href="index.html" class="site-logo">
+                    <img src="images.png" alt="Fresno Chaffee Zoo home">
+                </a>
+                <button type="button" class="menu-close" popovertarget="site-menu" popovertargetaction="hide" aria-label="Close menu">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <nav aria-label="Menu">
+                <ul class="menu-list">
+                    <li><a href="#" class="menu-item">Visit <span class="chevron chevron--right" aria-hidden="true"></span></a></li>
+                    <li><a href="#" class="menu-item">Animals <span class="chevron chevron--right" aria-hidden="true"></span></a></li>
+                    <li><a href="#" class="menu-item">Events <span class="chevron chevron--right" aria-hidden="true"></span></a></li>
+                    <li><a href="#" class="menu-item">Conservation <span class="chevron chevron--right" aria-hidden="true"></span></a></li>
+                    <li><a href="#" class="menu-item">Learning <span class="chevron chevron--right" aria-hidden="true"></span></a></li>
+                    <li><a href="#" class="menu-item">Support <span class="chevron chevron--right" aria-hidden="true"></span></a></li>
+                    <li><a href="#" class="menu-item">Blog <span class="chevron chevron--right" aria-hidden="true"></span></a></li>
+                </ul>
+            </nav>
+
+            <div class="site-menu__actions">
+                <a href="#" class="btn btn--tickets">Tickets</a>
+                <a href="#" class="btn btn--membership">Membership</a>
+            </div>
+
+            <select class="language-select" aria-label="Language">
+                <option value="en" selected>English</option>
+                <option value="es">Español</option>
+            </select>
+        </div>
+
+        <main id="main">
+            <section class="home-hero" aria-labelledby="hero-title">
+                <img class="home-hero__photo" src="images/hero-tiger.jpg" alt="A Sumatran tiger resting in the Kingdoms of Asia exhibit">
+                <div class="home-hero__content">
+                    <h1 id="hero-title" class="home-hero__title">Kingdoms of <span class="text-orange">Asia</span></h1>
+                    <p class="home-hero__subtitle">Immersive species dossiers from the heart of Kingdoms of Asia — verified history, photography and the stories behind the animals in our care.</p>
+                    <a href="#animals" class="btn btn--cta">Explore the collection <span aria-hidden="true">&rarr;</span></a>
+                </div>
+                <img class="paw-prints home-hero__paws" src="images/paw-prints.svg" alt="">
+            </section>
+
+            <section id="animals" class="animals" aria-labelledby="animals-title">
+                <h2 id="animals-title" class="visually-hidden">Animals of Kingdoms of Asia</h2>
+
+                <fieldset class="animal-tabs">
+                    <legend class="visually-hidden">Show animals by type</legend>
+
+                    <input class="animal-tabs__input" type="radio" name="animal-type" id="tab-all" value="all" checked>
+                    <label class="animal-tabs__tab" for="tab-all">All</label>
+
+                    <input class="animal-tabs__input" type="radio" name="animal-type" id="tab-mammal" value="mammal">
+                    <label class="animal-tabs__tab" for="tab-mammal">Mammals</label>
+
+                    <input class="animal-tabs__input" type="radio" name="animal-type" id="tab-reptile" value="reptile">
+                    <label class="animal-tabs__tab" for="tab-reptile">Reptiles</label>
+
+                    <input class="animal-tabs__input" type="radio" name="animal-type" id="tab-bird" value="bird">
+                    <label class="animal-tabs__tab" for="tab-bird">Birds</label>
+
+                    <input class="animal-tabs__input" type="radio" name="animal-type" id="tab-fish" value="fish">
+                    <label class="animal-tabs__tab" for="tab-fish">Fish</label>
+                </fieldset>
+
+                <ul class="animal-list">
+                    <li data-type="mammal">
+                        <a href="#" class="animal-banner">
+                            <img class="animal-banner__photo" src="images/sloth-bear.jpg" alt="A sloth bear with shaggy black fur">
+                            <span class="status-pill">Vulnerable</span>
+                            <span class="animal-banner__text">
+                                <span class="animal-banner__name">Sloth Bear</span>
+                                <i class="animal-banner__scientific" lang="la">Melursus ursinus</i>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li data-type="mammal">
+                        <a href="#" class="animal-banner">
+                            <img class="animal-banner__photo" src="images/malayan-tapir.jpg" alt="A black-and-white Malayan tapir">
+                            <span class="status-pill">Endangered</span>
+                            <span class="animal-banner__text">
+                                <span class="animal-banner__name">Malayan Tapir</span>
+                                <i class="animal-banner__scientific" lang="la">Tapirus indicus</i>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li data-type="mammal">
+                        <a href="#" class="animal-banner">
+                            <img class="animal-banner__photo" src="images/sumatran-orangutan.jpg" alt="A Sumatran orangutan with long reddish-orange hair">
+                            <span class="status-pill">Critically Endangered</span>
+                            <span class="animal-banner__text">
+                                <span class="animal-banner__name">Sumatran Orangutan</span>
+                                <i class="animal-banner__scientific" lang="la">Pongo abelii</i>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li data-type="mammal">
+                        <a href="#" class="animal-banner">
+                            <img class="animal-banner__photo" src="images/tiger.jpg" alt="A tiger with orange and black stripes">
+                            <span class="status-pill">Critically Endangered</span>
+                            <span class="animal-banner__text">
+                                <span class="animal-banner__name">Tiger</span>
+                                <i class="animal-banner__scientific" lang="la">Panthera tigris jacksoni</i>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li data-type="reptile">
+                        <a href="#" class="animal-banner">
+                            <img class="animal-banner__photo" src="images/sunda-gharial.jpg" alt="A Sunda gharial with its long, narrow snout">
+                            <span class="status-pill">Endangered</span>
+                            <span class="animal-banner__text">
+                                <span class="animal-banner__name">Sunda Gharial</span>
+                                <i class="animal-banner__scientific" lang="la">Tomistoma schlegelii</i>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li data-type="bird">
+                        <a href="#" class="animal-banner">
+                            <img class="animal-banner__photo" src="images/rhinoceros-hornbill.jpg" alt="A rhinoceros hornbill showing its orange casque">
+                            <span class="status-pill">Vulnerable</span>
+                            <span class="animal-banner__text">
+                                <span class="animal-banner__name">Rhinoceros Hornbill</span>
+                                <i class="animal-banner__scientific" lang="la">Buceros rhinoceros</i>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li data-type="reptile">
+                        <a href="komodo-dragon.html" class="animal-banner">
+                            <img class="animal-banner__photo" src="images/komodo-dragon.jpg" alt="A Komodo dragon walking with its forked tongue out">
+                            <span class="status-pill">Endangered</span>
+                            <span class="animal-banner__text">
+                                <span class="animal-banner__name">Komodo Dragon</span>
+                                <i class="animal-banner__scientific" lang="la">Varanus komodoensis</i>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li data-type="mammal">
+                        <a href="#" class="animal-banner">
+                            <img class="animal-banner__photo" src="images/asian-small-clawed-otter.jpg" alt="An Asian small-clawed otter standing on a rock">
+                            <span class="status-pill">Vulnerable</span>
+                            <span class="animal-banner__text">
+                                <span class="animal-banner__name">Asian Small-Clawed Otter</span>
+                                <i class="animal-banner__scientific" lang="la">Aonyx cinereus</i>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li data-type="fish">
+                        <a href="#" class="animal-banner">
+                            <img class="animal-banner__photo" src="images/giant-gourami.jpg" alt="A giant gourami swimming underwater">
+                            <span class="status-pill">Least Concern</span>
+                            <span class="animal-banner__text">
+                                <span class="animal-banner__name">Giant Gourami</span>
+                                <i class="animal-banner__scientific" lang="la">Osphronemus goramy</i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="site-footer__triangle" aria-hidden="true"></div>
+            <div class="site-footer__content">
+                <p>&copy; Fresno Chaffee Zoo</p>
+            </div>
+        </footer>
     </body>
 </html>
